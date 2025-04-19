@@ -6,5 +6,5 @@ The Coffee Bar Forum app is designed to be a platform aimed at coffee enthusiast
 
 ## Project Wireframe
 
-![Landing page](cs408_landing.png)
-![Form page](cs408_Form.png)
+![Landing page](img/cs408_landing.png)
+![Form page](img/cs408_Form.png)

@@ -1,4 +1,92 @@
-h1{
-  border-color: #d3e644;
-  border-style: dashed;
+/* .horizontal-line-2 {
+	width: 868.9999999999999px;
+	height: 1.1368683772161603e-13px;
+	border-color: #355723;
+	border-width: 2px;
+	border-style: solid;
+} */
+body {
+	background-color: #F1EAD8;
+}
+
+h2, p, a {
+	font-family: "Bodoni Moda SC";
+}
+
+h2 {
+	width: 400px;
+	height: 100px;
+	font-weight: 400;
+	font-size: 85px;
+	color: #355723;
+}
+
+#flex-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.the-coffee-forum {
+	margin: 0 auto;
+	padding-top: 30px;
+	color: #355723;
+	font-family: "Aguafina Script";
+	font-weight: 400;
+	font-size: 100px;
+	text-align: center;
+  /* border-top: 2px solid #355723;
+  border-bottom: 2px solid #355723; */
+}
+
+.forum-lines {
+	width: 1000px;
+	height: 3px;
+	border-color: rgb(53, 87, 35);
+	border: 0;
+	height: 2px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(53, 87, 35, 1), rgba(0, 0, 0, 0));
+}
+
+.menu {
+	height: 80px;
+	background: #2D2F22;
+	color: #FFFFFF;
+	border-radius: 1px 1px 1px 1px;
+	font-family: "Bodoni Moda SC";
+	font-weight: 400;
+	font-size: 30px;
+	text-align: center;
+	align-items: center;
+	justify-content: space-between;
+	display: flex;
+}
+
+.menu a {
+	text-decoration: none;
+	color: white;
+	flex-grow: 1;
+}
+
+.purpose {
+	width: 407px;
+	height: 100px;
+	color: #355723;
+	font-family: "Bodoni Moda SC";
+	font-weight: 400;
+	font-size: 85px;
+	text-align: left;
+}
+
+.index-content {
+	max-width: 800px;
+	padding: 20px;
+}
+  
+.content-1 {
+	margin: 0 auto;
+	padding: 0 20px;
+	max-width: 980px;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 10px;
 }
