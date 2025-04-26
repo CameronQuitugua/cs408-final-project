@@ -1,15 +1,9 @@
-/* .horizontal-line-2 {
-	width: 868.9999999999999px;
-	height: 1.1368683772161603e-13px;
-	border-color: #355723;
-	border-width: 2px;
-	border-style: solid;
-} */
+
 body {
 	background-color: #F1EAD8;
 }
 
-h2, p, a {
+h2, p, a, label{
 	font-family: "Bodoni Moda SC";
 }
 
@@ -19,6 +13,10 @@ h2 {
 	font-weight: 400;
 	font-size: 85px;
 	color: #355723;
+}
+
+img {
+	max-width: 100px;
 }
 
 #flex-container {
@@ -34,12 +32,10 @@ h2 {
 	font-weight: 400;
 	font-size: 100px;
 	text-align: center;
-  /* border-top: 2px solid #355723;
-  border-bottom: 2px solid #355723; */
 }
 
 .forum-lines {
-	width: 1000px;
+	width: 100%;
 	height: 3px;
 	border-color: rgb(53, 87, 35);
 	border: 0;
@@ -67,26 +63,83 @@ h2 {
 	flex-grow: 1;
 }
 
-.purpose {
-	width: 407px;
-	height: 100px;
-	color: #355723;
-	font-family: "Bodoni Moda SC";
-	font-weight: 400;
-	font-size: 85px;
-	text-align: left;
+.main-content h2 {
+	margin: 50px 0px 10px 0px;
 }
 
 .index-content {
-	max-width: 800px;
-	padding: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.index-content article {
+	overflow: hidden;
+}
+
+.index-content article p {
+	overflow-wrap: break-word;
+	font-size: 20px;
+}
+
+.index-content aside {
+	display: flex;
+	justify-content: center; 
+	align-items: center;     
+	height: 300px;           
+	overflow: hidden;        
 }
   
-.content-1 {
-	margin: 0 auto;
-	padding: 0 20px;
-	max-width: 980px;
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	gap: 10px;
+.index-content aside img {
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
+	width: auto;
+	object-fit: contain; 
 }
+
+/*** FORM ***/
+#form-body {
+	background-color: #2D2F22;
+}
+
+#form-body h1 {
+	font-family: "Aguafina Script";
+	font-weight: 400;
+  	font-size: 135px;
+	box-shadow: -3px 2px 4px rgba(0, 0, 0, 0.25);
+	margin: 0;
+	text-align: center;
+	font-size: 100px;
+	color: white;
+}
+
+.form {
+	background-color: #faf3e0;
+	border: white;
+	border-radius: 5%;
+	text-align: right;
+	padding: 10px;
+	border-style: solid;
+	display: inline-block;
+  }
+  
+  .form label {
+	padding-right: 5px;
+  }
+
+  button {
+	background-color: #2D2F22;
+	border-radius: 5%;
+	border: none;
+	color: #faf3e0;
+	padding: 10px 15px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	transition-duration: 0.5s;
+  }
+
+  button:hover {
+	background-color: #4c4f3a;
+  }

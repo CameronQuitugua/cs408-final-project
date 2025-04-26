@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Hello World!</title>
+  <title>Form</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
@@ -16,17 +16,21 @@
   
   <div id="flex-container">
 
-    <hr class="forum-lines">
-    <h1 class="the-coffee-forum">Form</h1>
-    <hr class="forum-lines">
+    <h1>FORM</h1>
 
-    <div>
-      <nav class="menu">
-        <a href="index.html">HOME</a>
-        <a href="form.html">FORM</a>
-        <a href="posts.html">POSTS</a>
-        <a href="search.html">SEARCH</a>
-      </nav>
+    <div class="form">
+      <form id="item-form">
+          <label for="name">Name: </label>
+          <input type="text" id="name" name="name"><br><br>
+          
+          <label for="loc">Location: </label>
+          <input type="text" id="loc" name="loc"><br><br>
+          
+          <label for="des">Description: </label>
+          <input type="text" id="des" name="des"><br><br>
+          
+          <button id="send-data">Submit</button><br><br>
+      </form>
     </div>
 
   </div>
