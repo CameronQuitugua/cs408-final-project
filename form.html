@@ -1,39 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>Form</title>
+  <title>Coffee Forum</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/form-style.css">
+  <script src="js/main.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body id="form-body">
-  
-  <div id="flex-container">
+<body>
 
     <h1>FORM</h1>
 
+    <div>
+      <nav class="menu">
+        <a href="index.html">HOME</a>
+        <a href="form.html">FORM</a>
+        <a href="posts.html">POSTS</a>
+        <a href="search.html">SEARCH</a>
+      </nav>
+    </div>
+
     <div class="form">
       <form id="item-form">
-          <label for="name">Name: </label>
+          <label for="id">ID: </label>
+          <input type="text" id="id" name="id"><br><br>
+
+          <label for="name">Name of Coffee Shop: </label>
           <input type="text" id="name" name="name"><br><br>
           
           <label for="loc">Location: </label>
           <input type="text" id="loc" name="loc"><br><br>
-          
+
+          <label for="rate">Rating: </label>
+          <div class="stars" id="rate">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div><br>
+
+          <label for="cost">Cost: </label>
+          <div class="dollars" id="cost">
+            <i class="fa-solid fa-dollar"></i>
+            <i class="fa-solid fa-dollar"></i>
+            <i class="fa-solid fa-dollar"></i>
+            <i class="fa-solid fa-dollar"></i>
+            <i class="fa-solid fa-dollar"></i>
+          </div><br>
+
           <label for="des">Description: </label>
           <input type="text" id="des" name="des"><br><br>
           
-          <button id="send-data">Submit</button><br><br>
+          <button id="send-data" type="submit">Submit</button><br><br>
       </form>
     </div>
-
-  </div>
 
 </body>
 

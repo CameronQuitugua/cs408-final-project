@@ -1,10 +1,20 @@
-
 body {
-	background-color: #F1EAD8;
+	background-color: #2D2F22;
 }
 
 h2, p, a, label{
-	font-family: "Bodoni Moda SC";
+	font-family: "Playfair Display SC";
+}
+
+h1 {
+	font-family: "Aguafina Script";
+	font-weight: 400;
+  	font-size: 135px;
+	text-shadow: -3px 2px 4px rgba(0, 0, 0, 0.25);
+	margin: 0;
+	text-align: center;
+	font-size: 100px;
+	color: white;
 }
 
 h2 {
@@ -15,13 +25,9 @@ h2 {
 	color: #355723;
 }
 
-img {
-	max-width: 100px;
-}
-
-#flex-container {
-	display: flex;
-	flex-direction: column;
+label {
+	font-size: 20px;
+	font-weight: 500;
 }
 
 .the-coffee-forum {
@@ -33,6 +39,7 @@ img {
 	font-size: 100px;
 	text-align: center;
 }
+
 
 .forum-lines {
 	width: 100%;
@@ -63,71 +70,34 @@ img {
 	flex-grow: 1;
 }
 
-.main-content h2 {
-	margin: 50px 0px 10px 0px;
-}
-
-.index-content {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-}
-
-.index-content article {
-	overflow: hidden;
-}
-
-.index-content article p {
-	overflow-wrap: break-word;
-	font-size: 20px;
-}
-
-.index-content aside {
+.form {	
+	margin: 0 auto;
 	display: flex;
-	justify-content: center; 
-	align-items: center;     
-	height: 300px;           
-	overflow: hidden;        
-}
-  
-.index-content aside img {
-	max-width: 100%;
-	max-height: 100%;
-	height: auto;
-	width: auto;
-	object-fit: contain; 
+	align-items: center;
+	justify-content: center;
+	text-align: left;
 }
 
-/*** FORM ***/
-#form-body {
-	background-color: #2D2F22;
-}
-
-#form-body h1 {
-	font-family: "Aguafina Script";
-	font-weight: 400;
-  	font-size: 135px;
-	box-shadow: -3px 2px 4px rgba(0, 0, 0, 0.25);
-	margin: 0;
-	text-align: center;
-	font-size: 100px;
-	color: white;
-}
-
-.form {
+#item-form {
 	background-color: #faf3e0;
+	border-style: solid;
 	border: white;
 	border-radius: 5%;
-	text-align: right;
-	padding: 10px;
-	border-style: solid;
-	display: inline-block;
-  }
+	padding: 20px;
+}
   
-  .form label {
+.form label {
 	padding-right: 5px;
-  }
+}
 
-  button {
+.rate {
+	background: url('http://imgur.com/I0EwG.png') transparent;
+	height: 48px;
+	width: 45px;
+	border: none;
+}
+
+#send-data {
 	background-color: #2D2F22;
 	border-radius: 5%;
 	border: none;
@@ -138,8 +108,44 @@ img {
 	font-size: 16px;
 	cursor: pointer;
 	transition-duration: 0.5s;
-  }
+}
 
-  button:hover {
+#send-data:hover {
 	background-color: #4c4f3a;
-  }
+}
+
+/** STARS **/
+.stars {
+	display: flex;
+	align-items: center;
+	gap: 25px;
+}
+
+.stars i {
+	color: #e6e6e6;
+	font-size: 35px;
+	cursor: pointer;
+	transition: color 0.2s ease;
+}
+
+.stars i.active {
+	color: #ff9c1a;
+}
+
+/** DOLLARS **/
+.dollars {
+	display: flex;
+	align-items: center;
+	gap: 35px;
+}
+
+.dollars i {
+	color: #e6e6e6;
+	font-size: 35px;
+	cursor: pointer;
+	transition: color 0.2s ease;
+}
+
+.dollars i.active {
+	color: #82ff2f;
+}

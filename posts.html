@@ -3,33 +3,94 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Hello World!</title>
+  <title>Coffee Forum</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/posts-style.css">
+  <script src="js/main.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">  
 </head>
 
-<body id="posts-body">
+<body>
 
-  <div id="flex-container">
+  <hr class="forum-lines">
+  <h1 class="the-coffee-forum">Posts</h1>
+  <hr class="forum-lines">
 
-    <hr class="forum-lines">
-    <h1 class="the-coffee-forum">Posts</h1>
-    <hr class="forum-lines">
-
-    <div>
-      <nav class="menu">
-        <a href="index.html">HOME</a>
-        <a href="form.html">FORM</a>
-        <a href="posts.html">POSTS</a>
-        <a href="search.html">SEARCH</a>
-      </nav>
-    </div>
-
+  <div>
+    <nav class="menu">
+       <a href="index.html">HOME</a>
+       <a href="form.html">FORM</a>
+       <a href="posts.html">POSTS</a>
+       <a href="search.html">SEARCH</a>
+     </nav>
   </div>
+
+  <br>
+
+  <div class="responses">
+    <button id="load-data">load all items</button><br>
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Id</th>
+                  <th>Name</th>
+                  <th>Location</th>
+                  <th>Rate</th>
+                  <th>Cost</th>
+                  <th>Description</th>
+                  <th>Delete</th>
+              </tr>
+          </thead>
+          <tbody id="data-table">
+              <!-- Data Loads Here -->
+          </tbody>
+      </table>
+  </div>
+
+  <script>
+    document.getElementById("load-data").onclick = function () {
+    let tableBody = document.getElementById("data-table");
+    let xhr = new XMLHttpRequest();
+    
+    xhr.addEventListener("load", function () {
+        try {
+            let data = JSON.parse(xhr.responseText);
+            tableBody.innerHTML = "";
+            
+            data.forEach(item => {
+                let row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${item.id}</td>
+                    <td>${item.name}</td>
+                    <td>${item.location}</td>
+                    <td>${item.rate}/5</td>
+                    <td>${item.cost}/5</td>
+                    <td>${item.description}</td>
+                    <td><button class="delete-data" data-id="${item.id}">X</button></td>
+                `;
+                tableBody.appendChild(row);
+            });
+
+            document.querySelectorAll(".delete-data").forEach(button => {
+                button.addEventListener("click", function () {
+                    let itemId = this.getAttribute("data-id");
+                    deleteItem(itemId, this.closest("tr"));
+                });
+            });
+
+        } catch (error) {
+            console.error("Error parsing JSON response:", error);
+        }
+    });
+
+    xhr.open("GET", "https://bk9z1yyk3j.execute-api.us-east-2.amazonaws.com/items");
+    xhr.send();
+};
+  </script>
 
 </body>
 
